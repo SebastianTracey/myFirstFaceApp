@@ -10,6 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+ // images
+    @IBOutlet weak var face1: UIImageView!
+    @IBOutlet weak var face2: UIImageView!
+    @IBOutlet weak var welcomeLabel: UIImageView!
+    
+    // buttons
+    @IBOutlet weak var showFace1: UIButton!
+    @IBOutlet weak var ShowFace2: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,6 +30,24 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func showMyFace1(_ sender: Any) {
+        face1.isHidden = false
+        face2.isHidden = true
+        showFace1.isHidden = true
+        ShowFace2.isHidden = false
+        welcomeLabel.isHidden = false
+    }
+    
+    @IBAction func showMyFace2(_ sender: Any) {
+        face1.isHidden = true
+        face2.isHidden = false
+        showFace1.isHidden = false
+        ShowFace2.isHidden = true
+        welcomeLabel.isHidden = false
+    }
+    
+    
 
 
 }
